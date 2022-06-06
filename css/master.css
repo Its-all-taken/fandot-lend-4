@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Mono+One&display=swap');
+@import "reset.css";
+body{
+  background: #000;
+  font-size: 1.2vw;
+}
+.cover{
+  position: relative;
+  height: 90vh;
+}
+.cover-texts{
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1{
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #D2FB51;
+  font-size: 5em;
+}
+p{
+  font-family: 'Rubik';
+  font-style: normal;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FFFFFF;
+}
+button{
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  background-color: #D2FB51;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: .5s;
+}
+button:hover{
+  background-color: #fff;
+}
+.wrap{
+  position: relative;
+  padding: 0 5%;
+}
+.fandot-feat{
+    margin-top: 8vh;
+}
+.fandot-feat{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+}
+.features{
+  grid-column: 3 / span 3;
+}
+.features p{
+  margin-bottom: 70px;
+}
+.timelines p{
+  width: 50%;
+  margin-bottom: 40px;
+}
+.facts button{
+  margin: 0 auto;
+}
+.stats{
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.stat{
+  max-width: 250px;
+  text-align: center;
+}
+.stat:nth-of-type(2){
+  grid-column: 3;
+}
+.stat:nth-of-type(3){
+  grid-column: 5;
+}
+#b1{
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 40px;
+}
+.comments{
+  margin-top: 200px;
+}
+#tsparticles{
+  z-index: -1;
+  height: 90vh;
+  position: absolute;
+}
+.recognise{
+  margin-top: 200px;
+  height: 90vh;
+}
+.characters{
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+}
+.characters img{
+  max-height: 600px;
+}
+.recognise p{
+  color: #DBF96E;
+  font-size: 24px;
+  line-height: 28px;
+}
+.recognise div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#drag-me{
+  position: absolute;
+}
+.pictires{
+  margin-top: 100px;
+}
+.pic-grid{
+  margin-top: 40px;
+  margin-bottom: 200px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.pic-grid p:nth-of-type(1){
+  grid-row: 1;
+  grid-column: 4;
+}
+.pic-grid p:nth-of-type(2){
+  grid-row: 2;
+  grid-column: 1;
+}
+.pic-grid p:nth-of-type(3){
+  grid-row: 3;
+  grid-column: 3 / span 3;
+}
+.pic-grid img:nth-of-type(1){
+  grid-row: 1;
+  grid-column: 1;
+}
+.pic-grid img:nth-of-type(2){
+  grid-row: 1;
+  grid-column: 3;
+}
+.pic-grid img:nth-of-type(3){
+  grid-row: 2;
+  grid-column: 3 / span 2;
+}
+.pic-grid img:nth-of-type(4){
+  grid-row: 3;
+}
+.end{
+  margin-top: 300px;
+}
+.end button, .cover-texts button{
+  display: block;
+  margin: 40px auto;
+}
+.stikosiki{
+  margin-top: 200px;
+  display: flex;
+}
+.stikosiki img{
+  margin-left: 40px;
+}
+h2{
+  font-family: 'Rubik Mono One';
+  font-size: 40px;
+  line-height: 50px;
+  color: #DBF96E;
+}
