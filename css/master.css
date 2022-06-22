@@ -134,7 +134,7 @@ button:hover{
   overflow: hidden;
   position: relative;
   height: 80vh;
-  max-height: 600px;
+  max-height: 750px;
 }
 .characters img{
   max-height: 600px;
