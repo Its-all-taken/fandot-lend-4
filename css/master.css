@@ -41,6 +41,8 @@ button:hover{
   background-color: #fff;
 }
 .wrap{
+  margin: 0 auto;
+  max-width: 1920px;
   position: relative;
 }
 .timelines, .recognise, .pictires, .end,.comments{
@@ -98,12 +100,14 @@ button:hover{
 }
 .recognise{
   margin-top: 200px;
-  height: 90vh;
+  /* height: 90vh; */
+  /* max-height: 1080px; */
 }
 .characters{
   overflow: hidden;
   position: relative;
   height: 80vh;
+  max-height: 600px;
 }
 .characters img{
   max-height: 600px;
@@ -123,7 +127,7 @@ button:hover{
   left: 30%;
 }
 .pictires{
-  margin-top: 100px;
+  margin-top: 130px;
 }
 .end{
   margin-top: 300px;
@@ -187,6 +191,7 @@ h2{
  margin: 400px 0 0 100px
 }
 .pic-grid{
+  margin-top: 44px;
   display: grid;
   grid-column-gap: 24px;
   grid-row-gap: 20px;
@@ -239,6 +244,12 @@ h2{
 #p5{
   grid-column: 3 / span 2;
   grid-row: 5;
+}
+#p1 img, #p3 img, #p4 img,#p5 img{
+  width: 100%
+}
+#p2 img{
+  width: 152%
 }
 footer{
   margin-top: 200px;
