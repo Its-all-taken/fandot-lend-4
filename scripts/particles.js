@@ -92,6 +92,7 @@ $( function() {
 } );
 
 $(function loopim() {
-      $( ".pupa" ).clone().appendTo(".loopa");
-      $(".pupa").animate({ "margin-top": "-300%" }, 4000, 'linear');
+      $(".pupa").animate({ "margin-top": "-1500px" }, 4000, 'linear');
+      $(".pupa").clone().appendTo(".loopa").addClass("zapupoi").removeClass("pupa");
+      $(".zapupoi").delay(3360).animate({ "margin-top": "-1500px" }, 4000, 'linear');
     });
