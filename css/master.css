@@ -120,6 +120,7 @@ button:hover{
 }
 #drag-me{
   position: absolute;
+  left: 30%;
 }
 .pictires{
   margin-top: 100px;

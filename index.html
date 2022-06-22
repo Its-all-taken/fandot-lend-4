@@ -6,7 +6,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
-    <link rel="manifest" href="fav/site.webmanifest">
     <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#1e1e1e">
     <link rel="stylesheet" href="css/master.css">
     <script src="scripts/jquery-3.6.0.min.js"></script>
@@ -39,12 +38,13 @@
           <button type="button" name="button">создать лучший таймлайн</button>
         </div>
         <div class="loop">
-          
+
         </div>
       </div>
       <div class="stats">
-          <div class='test'></div>
-        </div>
+        <!-- <div class="numb"></div> -->
+        <div class='test'></div>
+      </div>
         <button id="b1" type="button" name="button">найти лучшие таймлайны</button>
         <!-- <div class="comments">
           <p>Интересные дискусии,<br> которые можно поддержать:</p>
@@ -136,7 +136,7 @@
        airport: function(array) {
 
         var self = $(this);
-        var chars = ['а','б','в','г','д','е','ж','й','з','и','к','л','м','н','о','п','р','с','т','у','ф','х','ц','щ','э','ю','я','-', ' '];
+        var chars = ['7','9','k','1','2','>','а','б','в','г','д','е','ж','й','з','и','к','л','м','н','о','п','р','с','т','у','ф','х','ц','щ','э','ю','я','-', ' '];
         var longest = 0;
         var items = items2 = array.length;
 
@@ -175,7 +175,6 @@
         testChar(0,0,0,0);
           }
         });
-
         $('.test').airport([ '>1k таймлайнов', '297 тайтлов', '>2k фанатов']);
       </script>
   </body>
