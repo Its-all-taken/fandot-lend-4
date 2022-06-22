@@ -2,7 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Fan.</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/site.webmanifest">
+    <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#1e1e1e">
     <link rel="stylesheet" href="css/master.css">
     <script src="scripts/jquery-3.6.0.min.js"></script>
     <script src="scripts/jquery-ui.min.js"></script>
@@ -10,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
     <script src="scripts/particles.js"></script>
+    <script src="scripts/change.js"></script>
   </head>
   <body>
     <div class="cover">
@@ -20,12 +26,11 @@
       <div id="tsparticles"></div>
     </div>
     <div class="wrap">
-      <div class="fandot-feat">
-        <h1>fan.</h1>
+      <div>
         <div class="features">
-          <p>платформа для создания таймлайнов фантастических вселенных</p>
-          <p>место собрания увлечённых людей, настоящих фанатов</p>
-          <p>место, где в дискуссиях достигают фандомной истины</p>
+          <p>Fan. — твоя<br>библиотека таймлайнов</p>
+          <p>Fan. — дом<br>для коммьюнити</p>
+          <p>Fan. — место<br>для дискуссии</p>
         </div>
       </div>
       <div class="timelines">
@@ -33,18 +38,7 @@
         <button type="button" name="button">создать лучший таймлайн</button>
       </div>
       <div class="stats">
-          <div class="stat">
-            <h1>1</h1>
-            <p>уникальных тайтлов, может быть</p>
-          </div>
-          <div class="stat">
-            <h1>2</h1>
-            <p>нереальных неповторимых таймлайнов</p>
-          </div>
-          <div class="stat">
-            <h1>3</h1>
-            <p>эфирных фанатов</p>
-          </div>
+          <div class='test'></div>
         </div>
         <button id="b1" type="button" name="button">найти лучшие таймлайны</button>
         <div class="comments">
@@ -82,15 +76,69 @@
             <p>Погрузись в мир фантастических вселенных</p>
           </div>
         </div>
-        <div class="end">
-          <h1>Присоединяйся к&nbsp;увлечённому сообществу</h1>
-          <button type="button" name="button">присоединиться</button>
-        </div>
         <div class="stikosiki">
-          <h2>лучший<br>стикерпак:</h2>
-          <img src="images/qr.jpg" alt="">
+          <div class="st-con">
+            <div>
+              <h1>стикеры</h1>
+              <p>неси истину в телегу</p>
+            </div>
+            <img class="qr" src="images/qr.svg" alt="">
+          </div>
+          <img class="mockup" src="images/stiksMoc.png" alt="">
+        </div>
+        <div class="end">
+          <h1>стань частью<br>культуры<br>фандомов</h1>
+          <button type="button" name="button">присоединиться</button>
         </div>
       </div>
     </div>
+
+      <script type="text/javascript">
+        $.fn.extend({
+       airport: function(array) {
+
+        var self = $(this);
+        var chars = ['а','б','в','г','д','е','ж','й','з','и','к','л','м','н','о','п','р','с','т','у','ф','х','ц','щ','э','ю','я','-', ' '];
+        var longest = 0;
+        var items = items2 = array.length;
+
+        function pad(a,b) { return a + new Array(b - a.length + 1).join(' '); }
+
+        $(this).empty();
+
+        while(items--)
+          if(array[items].length > longest) longest = array[items].length;
+
+        while(items2--)
+          array[items2] = pad(array[items2],longest);
+
+        spans = longest;
+        while(spans--)
+          $(this).prepend("<span class='c" + spans + "'></span>");
+
+
+        function testChar(a,b,c,d){
+          if(c >= array.length)
+            setTimeout(function() { testChar(0,0,0,0); }, 1000);
+          else if(d >= longest)
+            setTimeout(function() { testChar(0,0,c+1,0); }, 1000);
+          else {
+            $(self).find('.c'+a).html((chars[b]==" ")?"&nbsp;":chars[b]);
+            setTimeout(function() {
+              if(b > chars.length)
+                testChar(a+1,0,c,d+1);
+              else if(chars[b] != array[c].substring(d,d+1).toLowerCase())
+                testChar(a,b+1,c,d);
+              else
+                testChar(a+1,0,c,d+1);
+            }, 20);
+          }
+        }
+        testChar(0,0,0,0);
+          }
+        });
+
+        $('.test').airport([ '>1k таймлайнов', '297 тайтлов', '>2k фанатов']);
+      </script>
   </body>
 </html>

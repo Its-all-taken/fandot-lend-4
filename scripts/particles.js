@@ -68,7 +68,7 @@ $(document).ready(async function () {
           type: "character",
           character: {
             "value": ["История серии ФФ", "Атака титанов", "Харуха и депрессия", "Фильмы Кубрика", "Поиски немо в картинках", "Бегущий в лабиринте", "Ланнестеры из книг", "Аниме 90х", "Гарри Поттер", "Ересь хоруса", "История примархов", "Мой кампейн на Зендрике", "Как избежать цикла страданий", "ЗВ"],
-            "font": "Verdana",
+            "font": "Gymkhana",
             "style": "",
             "weight": ""
           }
@@ -86,6 +86,7 @@ $(document).ready(async function () {
       }
     );
 });
+
 $( function() {
   $( " #drag-me " ).draggable({ containment: "parent" });
   } );

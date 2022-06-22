@@ -42,6 +42,8 @@ button:hover{
 }
 .wrap{
   position: relative;
+}
+.timelines, .recognise, .pictires, .end,.comments{
   padding: 0 5%;
 }
 .fandot-feat{
@@ -159,6 +161,9 @@ button:hover{
 .end{
   margin-top: 300px;
 }
+.end h1{
+  text-align: center;
+}
 .end button, .cover-texts button{
   display: block;
   margin: 40px auto;
@@ -166,13 +171,40 @@ button:hover{
 .stikosiki{
   margin-top: 200px;
   display: flex;
+  background-image: url('../images/background.svg');
+  /* background-size: cover; */
+  background-position: top center;
+  height: 1000px;
 }
-.stikosiki img{
-  margin-left: 40px;
+.mockup{
+  align-self: center;
+  height: 600px;
+  margin: 0 auto;
+}
+.qr{
+  height: 120px;
+  margin-left: 100px;
+}
+.stikosiki h1, .stikosiki p{
+  color: #000;
 }
 h2{
   font-family: 'Rubik Mono One';
   font-size: 40px;
   line-height: 50px;
   color: #DBF96E;
+}
+.test{
+  font-size:100px;
+  font-family: 'Rubik Mono One';
+  letter-spacing:5px;
+  font-weight:900;
+  color:#DBF96E;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.st-con{
+  margin: 400px 0 0 100px;
+  display: flex;
 }

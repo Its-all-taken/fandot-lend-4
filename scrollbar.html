@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style media="screen">
+      body {
+        margin: 0;
+        overflow: auto;
+        background: black;
+      }
+      .content {
+        width: 100%;
+        height: 900px;
+      }
+      #black {
+        background-color: black;
+      }
+      #green {
+        background-color: green;
+      }
+      #red {
+        background-color: red;
+      }
+      #yellow {
+        background-color: yellow;
+      }
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: black;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D2FB51;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #9FBE3B;
+      }
+      .section {
+        display: flex;
+        justify-content: space-between
+      }
+      #padding {
+        padding-left: 7.14vw;
+        padding-right: 7.14vw;
+      }
+      .cards_wrapper {
+        width: 34.57vw;
+        background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+      }
+      h3 {
+        font-size: 36px;
+        font-family: Rubik;
+        color: white;
+        font-weight: normal;
+      }
+      h1 {
+        font-family: 'Rubik Mono One', sans-serif;
+        font-size: 109px;
+        text-align: center;
+      }
+      @import url('https://fonts.googleapis.com/css?family=Montserrat');
+      .test{
+        font-size:100px;
+        font-family:Montserrat;
+        letter-spacing:5px;
+        font-weight:900;
+        color:silver;
+        text-transform:uppercase;
+        position: fixed;
+        top: 40%;
+        left:30%;
+        display: block;
+        transform: translate(0,-50%);
+        -webkit-transform: translate(0,-50%);
+        z-index: 999999;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section" id="padding">
+      <div class="text">
+        <h3>Хочешь рассказать, в каком порядке<br>смотреть фильмы по вселенной?</h3>
+        <button type="button" name="button">создать лучший таймлайн</button>
+      </div>
+      <div class="cards_wrapper">
+        <div class="cards"></div>
+      </div>
+    </div>
+    <div class="content" id="black"></div>
+    <div class="content" id="green">
+      <div class='test'></div>
+    </div>
+    <div class="content" id="red"></div>
+    <div class="content" id="yellow"></div>
+    <div class="content" id="black"></div>
+    <div class="content" id="green"></div>
+    <div class="content" id="red"></div>
+    <div class="content" id="yellow"></div>
+    <script type="text/javascript">
+      (function($){
+     $.fn.extend({
+         airport: function(array) {
+
+      var self = $(this);
+      var chars = ['а','б','в','г','д','е','ж','й','з','и','к','л','м','н','о','п','р','с','т','у','ф','х','ц','щ','э','ю','я','-', ' '];
+      var longest = 0;
+      var items = items2 = array.length;
+
+      function pad(a,b) { return a + new Array(b - a.length + 1).join(' '); }
+
+      $(this).empty();
+
+      while(items--)
+        if(array[items].length > longest) longest = array[items].length;
+
+      while(items2--)
+        array[items2] = pad(array[items2],longest);
+
+      spans = longest;
+      while(spans--)
+        $(this).prepend("<span class='c" + spans + "'></span>");
+
+
+      function testChar(a,b,c,d){
+        if(c >= array.length)
+          setTimeout(function() { testChar(0,0,0,0); }, 1000);
+        else if(d >= longest)
+          setTimeout(function() { testChar(0,0,c+1,0); }, 1000);
+        else {
+          $(self).find('.c'+a).html((chars[b]==" ")?"&nbsp;":chars[b]);
+          setTimeout(function() {
+            if(b > chars.length)
+              testChar(a+1,0,c,d+1);
+            else if(chars[b] != array[c].substring(d,d+1).toLowerCase())
+              testChar(a,b+1,c,d);
+            else
+              testChar(a+1,0,c,d+1);
+          }, 20);
+        }
+      }
+
+      testChar(0,0,0,0);
+        }
+    });
+  })(jQuery);
+
+  $(  '.test'  ).airport([ 'таймлайнов', 'тайтлов', 'фанатов']);
+    </script>
+  </body>
+</html>
