@@ -42,7 +42,7 @@ button:hover{
 }
 .wrap{
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1400px;
   position: relative;
 }
 .timelines, .recognise, .pictires, .end,.comments{
