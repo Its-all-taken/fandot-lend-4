@@ -92,10 +92,6 @@ $( function() {
 } );
 
 $(function loopim() {
-  		$(".pupa").animate({ "margin-top": "-300%" }, 4000, 'linear');
       $( ".pupa" ).clone().appendTo(".loopa");
-      var reset = function() {
-		$(this).css("margin-top", "0%");
-		$(this).animate({ "margin-left": "-100%" }, 12000, 'linear', reset);
-	};
+      $(".pupa").animate({ "margin-top": "-300%" }, 4000, 'linear');
     });
