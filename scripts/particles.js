@@ -89,4 +89,9 @@ $(document).ready(async function () {
 
 $( function() {
   $( " #drag-me " ).draggable({ containment: "parent" });
-  } );
+} );
+
+$(function loopim() {
+  		$(".pupa").animate({ "margin-top": "-300%" }, 4000, 'linear', 'loop');
+      $( ".pupa" ).clone().appendTo(".loopa");
+    });

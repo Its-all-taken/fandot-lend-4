@@ -62,8 +62,35 @@ button:hover{
 .features p{
   margin-bottom: 70px;
 }
+.overlay{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gradi1{
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+.gradi2{
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+.timelines{
+  display: flex;
+}
+.loopa{
+  position: relative;
+  width: 60%;
+  margin: 0;
+  max-height: 500px;
+  overflow: hidden;
+}
 .timelines p{
-  width: 50%;
   margin-bottom: 40px;
 }
 .facts button{
