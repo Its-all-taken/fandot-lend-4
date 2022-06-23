@@ -158,3 +158,21 @@ $.fn.extend({
   setTimeout(function () {
     $(".cards_clone").addClass("anim");
   }, 1999)
+
+  $.fn.isInViewport = function() {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+
+  $(window).on('resize scroll', function() {
+      if ($('.commentary').isInViewport()) {
+          $(".commentary").addClass('comment-animate');
+      } else {
+          // $(".commentary").removeClass('comment-animate');
+      }
+  });
