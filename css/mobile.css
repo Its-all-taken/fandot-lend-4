@@ -111,7 +111,14 @@
     display: none;
   }
   .stikosiki{
-    overflow: hidden;
+    display: block;
+  }
+  .st-con{
+    margin-top: 70%;
+  }
+  .mockup{
+    margin-top: 10%;
+    height: 300px;
   }
   .st-con div{
     min-width: 200px;
@@ -129,8 +136,12 @@
   .qr{
     display: none;
   }
+
 }
 @media all and (max-width: 400px) {
+  .cover-texts h1{
+    font-size: 30px;
+  }
   h2{
     font-size: 32px;
     line-height: normal;

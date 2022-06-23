@@ -236,6 +236,7 @@ button:hover{
   /* background-size: cover; */
   background-position: top center;
   height: 1000px;
+  overflow: hidden;
 }
 .mockup{
   align-self: center;
