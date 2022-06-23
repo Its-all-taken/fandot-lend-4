@@ -113,6 +113,22 @@
   .stikosiki{
     overflow: hidden;
   }
+  .st-con div{
+    min-width: 200px;
+  }
+  .st-con p{
+    font-size: 24px;
+    line-height: normal;
+  }
+  .button-mobile{
+    margin-top: 40px;
+    display: block;
+    background-color: #000;
+    color: #D2FB51;
+  }
+  .qr{
+    display: none;
+  }
 }
 @media all and (max-width: 400px) {
   h2{

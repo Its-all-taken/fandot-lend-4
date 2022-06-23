@@ -55,6 +55,9 @@ button{
 button:hover{
   background-color: #fff;
 }
+.button-mobile{
+  display: none;
+}
 .wrap{
   margin: 0 auto;
   max-width: 1430px;
