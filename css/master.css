@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Mono+One&display=swap');
 @import "reset.css";
+@font-face {
+  font-family: 'Gymkhana';
+  src:  url('../fonts/gymkhana-bk.ttf') format('truetype');
+}
 body{
   background: #000;
   font-size: 1.2vw;
 }
+.cover img{
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  margin-top: 10%;
+}
 .cover{
   position: relative;
-  height: 90vh;
+  height: 100vh;
+}
+#tsparticles{
+  z-index: -1;
+  height: 100vh;
+  position: absolute;
 }
 .cover-texts{
   text-align: center;
@@ -159,11 +174,6 @@ button:hover{
 .comments{
   margin-top: 200px;
 }
-#tsparticles{
-  z-index: -1;
-  height: 90vh;
-  position: absolute;
-}
 .recognise{
   margin-top: 200px;
   /* height: 90vh; */
@@ -232,6 +242,7 @@ h2{
   color: #DBF96E;
 }
 .test{
+  line-height: normal;
   font-size:100px;
   font-family: 'Rubik Mono One';
   letter-spacing:5px;
@@ -382,11 +393,24 @@ a{
   font-size: 100px;
 }
 .numb{
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.numb p{
+  font-size: 24px;
+  color: #D2FB51;
+  text-align: left;
+  width: 90%
+}
+.numb p:first-of-type{
+  position: absolute;
+  text-align: right;
+  width: 70%;
+  top: 21%;
 }
 
 /* полина спасает проект за 10 секунд */
@@ -466,4 +490,8 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
 #bottom {
   bottom: 0;
+}
+
+.stats-mobile{
+  display: none;
 }
