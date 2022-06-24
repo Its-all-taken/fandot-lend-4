@@ -1,3 +1,20 @@
+@media all and (max-width: 768px) {
+  #numbers, .test{
+    font-size: 60px;
+  }
+  .numb  p{
+    font-size: 18px;
+  }
+  .numb p:first-of-type {
+    top: 5%;
+  }
+  .recognise{
+    display: none;
+  }
+  .stikosiki{
+    margin-top: 0;
+  }
+}
 @media all and (max-width: 650px) {
   h1{
     font-size: 34px;
