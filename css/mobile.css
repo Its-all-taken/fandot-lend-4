@@ -164,3 +164,11 @@
     line-height: normal;
   }
 }
+@media all and (max-width: 320px) {
+  .cover-texts h1{
+    font-size: 28px;
+  }
+  .comment-s p{
+    font-size: 24px
+  }
+}
