@@ -44,6 +44,7 @@ p{
   color: #FFFFFF;
 }
 button{
+  cursor: pointer;
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
   background-color: #D2FB51;
